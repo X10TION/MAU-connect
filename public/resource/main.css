@@ -1,0 +1,65 @@
+.btn{
+    margin-top: 15px;
+    color: rgb(255, 255, 255);
+    margin-left: 20px;
+}
+.hero{
+    margin-top: 5rem;
+}
+a{
+    color: #fff;
+}
+/* .right{
+    padding: 15px;
+} */
+nav{
+    padding: 5px;
+    padding-right: 12px;
+}
+.navbar-brand{
+    color: #fff;
+}
+p{
+    margin-top: 10px;
+    color: rgb(40, 40, 52);
+}
+a{
+    color: blue;
+}
+.ib:hover{
+    background: rgba(255, 255, 255, 0.915);
+}
+.grid{
+    background-color: red;
+}
+.cardme{
+    position: fixed;
+    margin-top: 3.6rem;
+    height: 100vh;
+}
+.alert-info{
+    margin-top: 2.8rem;
+    border-radius: 0px;
+    height: fit-content;
+}
+h7{
+    color:blue;
+}
+.searchme{
+  width: 40%;
+  margin-left: 220px;
+}
+.alert-info{
+    display: flex;
+}
+.btnn:hover{
+   
+    background: rgb(16, 1, 88);
+    cursor: pointer;
+}
+.col{
+    padding: 2px;
+}
+#time{
+    color: rgb(218, 3, 3);
+}
