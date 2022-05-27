@@ -45,9 +45,9 @@ a{
 h7{
     color:blue;
 }
-.searchme{
+#google{
   width: 40%;
-  margin-left: 220px;
+  margin-left: 290px;
 }
 .alert-info{
     display: flex;
