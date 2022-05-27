@@ -65,7 +65,7 @@
               <!--  -->
               <div class="alert alert-info" role="alert">
                 
-                <p id="couresname"><em>Course Tile </em></p>
+                <p id="couresname"><em>Course Title </em></p>
                  <p id="dep"> (department) </p> <p> <span id="time"> Started </span></p>
                 
 <input class="form-control searchme" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
@@ -122,29 +122,30 @@
                                 </div>
                                 <span></span>
                                 <h9><b>ID:</b></h9>
-                                <input class="form-control" id="lectureKEY" type="text" value="Readonly input here..." aria-label="readonly input example" readonly placeholder="user Id">
+                                <input class="form-control" id="KEY" type="text"  readonly placeholder="user Id">
                               </div>
                         </div>
                       </div>
                   </div>
                   <!--  -->
                   <div class="col">
-                    <span class="badge bg-primary btnn">Start</span>
-                    <span class="badge bg-secondary btnn">Clear</span>
-                    <span class="badge bg-info btnn">Unmute</span>
-                    <span class="badge bg-warning btnn">Mute</span>
-                    <span class="badge bg-danger btnn">End</span>
-                    <video width="820" height="440" controls>
-                   <source src="movie.mp4" type="video/mp4">
-                        <source src="movie.ogg" type="video/ogg">
-                        Your browser does not support the video tag.
-                      </video>
+                    <span class="badge bg-primary btnn" id="call">Start</span>
+                    <span class="badge bg-secondary btnn" id="stop">Stop</span>
+                    <span class="badge bg-info btnn" id="Unmute" >Unmute</span>
+                    <span class="badge bg-warning btnn" id="Mute">Mute</span>
+                    <span class="badge bg-danger btnn" id="End" >End</span>
+                    <video id="localvideo" 
+                    width="610" height="490"
+                    autoplay controls fixed bg-primary>
+                                  </video>
                   </div>
                   <div class="col">
+                    <h9>Student View</h9>
                     <div class="alert bg-light" role="alert">
-                        <video width="210" height="140" controls>
-                            <source src="movie.mp4" type="video/mp4">
-                                 <source src="movie.ogg" type="video/ogg">
+                      
+                        <video width="210" height="140" autoplay controls id="remotevideo">
+                            <source  type="video/mp4" id="remotevideo">
+                                 <source src="./resource/img/MAU-Logo-3-2022.png" type="video/ogg">
                                  Your browser does not support the video tag.
                                </video>
                         
@@ -163,3 +164,5 @@
     </div>
     <script src="index.js"></script>
     <script src="./mediaStream.js"></script>
+</body>
+</html>
