@@ -7,6 +7,9 @@ const Mute = document.getElementById("Mute")
 const Unmute = document.getElementById("Unmute")
 const End = document.getElementById("End")
 let tracks = []
+const configuration = {iceServers:[{urls:'stun:stun.l.google.com:19302'}]}
+let peer = new RTCPeerConnection(configuration)
+
 socket.on('connect', () => {
     localStorage.setItem("private", socket.id)
     key.value = socket.id
@@ -23,6 +26,19 @@ const openMediaDevice = async() =>{
     }
 }
 
+const createOffer = async() => {
+    try{
+        let stream = await openMediaDevice()
+        stream.getTracks.forEach(track => peer.addTrack(track))
+        let offer = await peer.createOffer()
+        peer.setLocalDescription(new RTCSessionDescription(offer))
+    }catch(error)
+    {
+         console.log(error)
+    }
+}
+
+
 // START FUNCTION
 call.addEventListener('click',() =>{
     openMediaDevice()
@@ -30,8 +46,6 @@ call.addEventListener('click',() =>{
     End.addEventListener('click', stopTrack)
 
 })
-
-
 
 // // using mediaDevice
 // navigator.mediaDevices.getUserMedia({video:true,audio:true})
